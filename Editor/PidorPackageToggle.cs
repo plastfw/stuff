@@ -1,15 +1,19 @@
 using UnityEditor;
 
+[InitializeOnLoad]
 public static class PidorPackageToggle
 {
     private const string MENU_ROOT = "PIDOR/";
     private const string ENABLE_KEY = "PIDOR_PACKAGE_ENABLED";
 
+    static PidorPackageToggle() =>
+        Menu.SetChecked(MENU_ROOT + "Enable Package", IsEnabled());
+
     [MenuItem(MENU_ROOT + "Open Favorites")]
     private static void OpenFavorites()
     {
         if (!IsEnabled()) return;
-        FolderQuickOpenWindow.OpenExternal();
+        FolderQuickOpenWindow.OpenExternal(PidorSaves.Load());
     }
 
     [MenuItem(MENU_ROOT + "Enable Package")]
