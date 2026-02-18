@@ -21,7 +21,7 @@ public static class HierarchyHighlighter
     {
         if (!PidorPackageToggle.IsEnabled()) return;
 
-        var go = EditorUtility.InstanceIDToObject(id) as GameObject;
+        var go = EditorUtility.EntityIdToObject(id) as GameObject;
         if (go == null) return;
 
         var key = $"{go.scene.path}|{go.transform.GetHierarchyPath()}";
