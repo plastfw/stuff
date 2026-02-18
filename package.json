@@ -1,7 +1,7 @@
 {
   "name": "com.pidor.tools",
   "displayName": "PIDOR TOOLS",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "unity": "6.3",
   "description": "Collection of Editor utilities: hierarchy highlighter, folder colorizer, quick open, and editor buttons.",
   "keywords": [
