@@ -21,7 +21,7 @@ public static class HierarchyToggleActiveHotkey
         if (!rect.Contains(e.mousePosition))
             return;
 
-        var obj = EditorUtility.InstanceIDToObject(instanceId) as GameObject;
+        var obj = EditorUtility.EntityIdToObject(instanceId) as GameObject;
         if (obj == null)
             return;
 
